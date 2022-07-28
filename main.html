@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roll a Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <center><a href="#how_to"><h1 id="title">Roll a Dice</h1></a></center>
+    <div class="container">
+      <div class="window" id="player_1">
+        <h2 id="player_1_name" onclick="setFPlayerName()">Player 1</h2>
+        <img src="img/gamer_1.jpg" class="avatar" />
+        <h1 id="player_1_score" class="score">SCORE: 00</h1>
+      </div>
+
+      <div class="window" id="dice_win">
+        <div class="dice_box">
+            <img src="img/dice_4.png" id="dice_1" class="dice_img">
+            <img src="img/dice_2.png" id="dice_2" class="dice_img">
+        </div>
+        <h2 id="winning_score" onclick="setWinningScore()">Winning Score: 100</h2>
+        <button class="button" id="roll_btn">Roll Dice</button><br>
+        <button class="button" id="reset_btn">New Game</button>
+      </div>
+
+      <div class="window" id="player_2">
+        <h2 id="player_2_name" onclick="setSPlayerName()">Player 2</h2>
+        <img src="img/gamer_2.jpg" class="avatar" />
+        <h1 id="player_2_score" class="score">SCORE: 00</h1>
+      </div>
+    </div>
+    <center><a href="#how_to">How to Play?</a></center>
+    <ul id="how_to">
+      <li>
+        You can set their names by clicking on the default names(Player 1 or Player 2) and can set the winning score to any number by clicking on the "Winning Score" text before starting the game.
+      </li>
+      <li>
+        Changing the player names and the winning score is only possible before starting to play
+      </li>
+      <li>
+        Default winning score will be 100. First player reach to the winning score wins.
+      </li>
+      <li>
+        Each player will get a chance to roll two dices at the same time. The process given below will continues until one player reaches the winning score.
+      </li>
+      <li>
+        If 02 dices give the same result (except the dice value 1), the same player will get another chance to roll the dice. Else other player gets the chance to roll 02 dices.
+      </li>
+      <li>
+        When calculating the score, If both dices give the value 1, individual marks of the respective player will be reduced to 0. Else sum of the two dice values will be added to individual scores of the player
+      </li>
+      <li>
+        To play again, click on New Game
+      </li>
+    </ul>
+
+    <center><h3><a href="#title">ENJOY THE GAME!</a></h3></center>
+    <footer>
+      <center><p>Created by Osura Viduranga. © 2022</p></center>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
